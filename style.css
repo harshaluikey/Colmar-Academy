@@ -1,0 +1,507 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* USING CSS VARIABLES */
+/* html {
+    --dark-grey: #3c3b3d;
+    --light-grey: #8e8e8e;
+    --lighter-grey: #dfdfdf;
+    --lightest-grey: #e9e9e9;
+} */
+
+
+
+/* NAVIGATION  */
+nav {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    padding: 1%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav li {
+    padding: 0.5em 0.5em;
+}
+
+nav li:hover{
+    cursor: pointer;
+    font-weight: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3c3b3d;
+    /* color: var(--dark-grey);  using css variables to define the colors */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-left: 24px;
+    transition: transform .2s;
+}
+
+.logo:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.logo p {
+    display: inline;
+    font-weight: bold;
+    color: #3c3b3d;
+}
+
+.logo span {
+    font-weight: medium;
+    color: #8e8e8e;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.mobile-nav:hover {
+    cursor: pointer;
+}
+
+/* 
+Welcome section 
+*/
+.container {
+    background-color: #dfdfdf;
+    display: flex;
+    padding: 5% 3%;
+}
+
+.container button {
+    background-color: #3c3b3d;
+    width: 100%;
+    height: 3rem;
+    cursor: pointer;
+    color: white;
+    transition: transform .2s;
+}
+
+.container button:hover{
+    transform: scale(1.1);
+    font-weight: 1000;
+}
+.container-left img {
+    width: 85%;
+}
+
+.container-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 1%;
+    padding: 0 2%;
+}
+
+.container-right h1, h4 {
+    padding: 5% 0;
+    color: #3c3b3d;
+
+}
+
+.container-right a {
+    color: white;
+    text-decoration: none;
+}
+
+/* INFORMATION SECTION */
+.info-container {
+    display: grid;
+    /* fraction of the grid i.e setting the width of the two containers inside the main container*/
+    grid-template-columns: 3fr 2fr; 
+    color: #3c3b3d;
+}
+
+/* Info Left */
+.info-left {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.info-left img {
+    width: 96%;
+    margin-left: 24px;
+}
+
+.info-left-content {
+    padding-bottom: 2%;
+    margin-left: 10px;
+}
+
+.info-left-content h2,p {
+    padding: 2%;
+    margin-left: 0;
+}
+
+.info-left-content p {
+    font-size: 80%;
+}
+
+
+/* Info Right */
+.info-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-right img {
+    width: 10rem;
+}
+
+.info-right h4 {
+    font-size: 140%;
+}
+
+.info-right button{
+    background: none;
+    border: 0;
+}
+
+.info-right button:hover{
+    font-weight: bold;
+
+}
+
+.info-right a{
+    text-decoration: none;
+}
+
+.orientation, .campus, .guest {
+    display: flex;
+    border: 1px solid #dfdfdf;
+    padding: 2%;
+}
+
+.orientation-info, .campus-info, .guest-info {
+   padding: 0 5%; 
+   margin-top: 4%;
+   font-size: 80%;
+}
+
+.orientation-info *, .campus-info *, .guest-info > * {
+    padding: 2% 0;
+ }
+
+.guest {
+    background-color: #dfdfdf;
+    margin: 0 0 2% 0;
+}
+
+/* Hiding Mobile Images */
+.orientation-left-mobile, .campus-left-mobile, .guest-left-mobile {
+    display: none;
+}
+
+/* LEARNING SECTION */
+.sl-container {
+    background-color: #e9e9e9;
+    padding: 2% 5% 8% 5%;
+}
+
+.sl-container h1 {
+    text-align: center;
+    color: #3c3b3d;
+    padding: 4%;
+}
+
+/* Learning Section Grid */
+.sl-grid-wrapper {
+    display: grid;
+    /* repeating the columns as desired */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2%;
+}
+
+.sl-grid-wrapper img {
+    width: 100%;
+}
+
+
+
+/* Learning Section Cards */
+/* >: selecting the direct childs of .sl-grid-wrapper class */
+.sl-grid-wrapper > * {
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s;
+}
+
+.sl-grid-wrapper > *:hover {
+    transform: scale(1.05);
+}
+
+.sl-grid-wrapper img:hover{
+    cursor: pointer;
+}
+
+.sl-info {
+    background-color: white;
+    padding: 5%;
+}
+
+.sl-info > * {
+    padding: 3% 0;
+}
+
+.sl-info > p {
+    font-size: small;
+    color: #8e8e8e;
+}
+
+.sl-mobile {
+    display: none;
+}
+
+/* THESIS SECTION */
+.thesis-container h1 {
+    color: #3c3b3d;
+    text-align: center;
+    padding: 5%;
+}
+
+.thesis-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+
+/* Reimagine Urban Container */
+.urban-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 3%;
+}
+
+.urban-video video {
+    width: 100%;
+    margin-left: 24px;
+}
+
+.urban-info {
+    padding: 1% 0 5% 0;
+    margin-left: 24px;
+}
+
+.urban-info * {
+    padding: 1% 0;
+}
+
+.urban-info p {
+    font-size: small;
+    color: #3c3b3d;
+}
+
+/* Right Thesis Container */
+.other-thesis-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.other-thesis-container img {
+    width: 10rem;
+    transition: transform .2s;
+}
+
+.other-thesis-container img:hover {
+    transform: scale(1.08);
+}
+
+.other-thesis-container img:hover{
+    cursor: pointer;
+}
+
+.other-thesis-container p{
+    font-size: small;
+    color: #3c3b3d;
+}
+
+.fisma, .now-and-then {
+    display: flex;
+    padding: 5%;
+}
+
+.fisma {
+    background-color: #e9e9e9;
+}
+
+.fisma-info, .nt-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fisma-info *, .nt-info * {
+    padding: 1%;
+    margin: 5% 8%;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #8e8e8e;
+    margin-bottom: 1%;
+    margin-left: 24px;
+}
+
+footer * {
+    font-size:small;
+    color: #3c3b3d;
+    margin-top: 0;
+    padding-top: 0.5%;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: #3c3b3d;
+}
+
+footer li {
+    padding: 0 1em;
+}
+
+
+/* MOBILE SCREEN */
+@media only screen and (max-width: 580px) {
+    /* Nav Bar */
+    nav .logo, nav ul {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        grid-gap: 70%;
+        margin: 2% 10%;
+    }
+
+    /* Welcome section */
+    .container {
+        flex-direction: column;
+        padding: 0 0 5% 0;
+    }
+
+    .container img {
+        width: 100%;
+    }
+
+    .container-right button {
+        background-color: #8e8e8e;
+        border: none;
+        font-size: 100%;
+    } 
+
+    /* Information section */
+    .info-left {
+        display: none;
+    }
+
+    .info-container {
+        grid-template-columns: 1fr;
+    }
+
+    .info-right > * {
+        display: flex;
+        flex-direction: column;
+        font-size: 120%;
+    }
+
+    .orientation-left-desktop, .campus-left-desktop, .guest-left-desktop {
+        display: none;
+    }
+
+    .info-right img {
+        width: 100%;
+    }
+
+    .orientation-left-mobile, .campus-left-mobile, .guest-left-mobile {
+        display: inline;
+    }
+
+    .guest {
+        background-color: white;
+    }
+
+    /* Start learning section */
+    .sl-container {
+        background-color: white;
+    }
+
+    .sl-grid-wrapper {
+        display: none;
+    }
+
+    .sl-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sl-mobile > * {
+        background-color: #e9e9e9;
+        color: #3c3b3d;
+        height: 5rem;
+        margin: 1%;
+        text-decoration: none;
+        transition: transform .2s;
+    }
+
+    .sl-mobile > *:hover{
+        transform: scale(1.05);
+        background-color: #cdcdcd;
+    }
+
+    .sl-mobile h1 {
+        padding: 5%;
+        text-align: left;
+    }
+
+    /* Thesis  section */
+    .urban-info, .other-thesis-container {
+        display: none;
+    }
+
+    .thesis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer section */
+    footer {
+        padding: 10% 0 2%;
+    }
+
+    footer ul {
+        display: none;
+    }
+
+    footer p {
+        font-size: 100%;
+    }
+    
+}
+  
